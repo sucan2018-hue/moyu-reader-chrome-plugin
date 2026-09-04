@@ -1,0 +1,7 @@
+{
+  "extName": { "message": "Inline Reader" },
+  "extDesc": { "message": "Read a local text file inline on any webpage." },
+  "cmdPrev": { "message": "Previous line" },
+  "cmdNext": { "message": "Next line" },
+  "cmdHide": { "message": "Restore original" }
+}

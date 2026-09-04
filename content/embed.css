@@ -1,0 +1,24 @@
+.yozo-reader-picking {
+  cursor: crosshair !important;
+}
+
+.yozo-reader-hover {
+  outline: 2px solid #c4a35a !important;
+  outline-offset: 2px;
+  background-color: rgba(196, 163, 90, 0.12) !important;
+}
+
+.yozo-reader-banner {
+  position: fixed;
+  z-index: 2147483647;
+  top: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  border-radius: 8px;
+  background: #2b241c;
+  color: #fffaf3;
+  font: 13px/1.4 "PingFang SC", "Hiragino Sans GB", sans-serif;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}

@@ -1,0 +1,64 @@
+{
+  "manifest_version": 3,
+  "default_locale": "zh_CN",
+  "name": "__MSG_extName__",
+  "version": "0.5.1",
+  "description": "__MSG_extDesc__",
+  "permissions": ["bookmarks", "storage", "unlimitedStorage", "scripting", "activeTab"],
+  "host_permissions": ["http://*/*", "https://*/*"],
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content/embed.js"],
+      "css": ["content/embed.css"],
+      "run_at": "document_idle",
+      "all_frames": true
+    }
+  ],
+  "action": {
+    "default_popup": "pages/popup.html",
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png"
+    }
+  },
+  "options_page": "pages/options.html",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "commands": {
+    "turn-prev": {
+      "suggested_key": {
+        "default": "Alt+Z",
+        "windows": "Alt+Z",
+        "mac": "MacCtrl+Z"
+      },
+      "description": "__MSG_cmdPrev__"
+    },
+    "turn-next": {
+      "suggested_key": {
+        "default": "Alt+X",
+        "windows": "Alt+X",
+        "mac": "MacCtrl+X"
+      },
+      "description": "__MSG_cmdNext__"
+    },
+    "hide-embed": {
+      "suggested_key": {
+        "default": "Alt+S",
+        "windows": "Alt+S",
+        "mac": "MacCtrl+S"
+      },
+      "description": "__MSG_cmdHide__"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extName": { "message": "行内阅读" },
+  "extDesc": { "message": "将本地文本嵌入任意网页的一行中阅读。" },
+  "cmdPrev": { "message": "上一页" },
+  "cmdNext": { "message": "下一页" },
+  "cmdHide": { "message": "还原原文" }
+}

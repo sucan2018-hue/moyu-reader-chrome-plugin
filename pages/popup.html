@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Inline Reader</title>
+    <link rel="stylesheet" href="common.css" />
+  </head>
+  <body class="popup">
+    <div class="wrap">
+      <select id="bookSelect" data-i18n-aria="popupTitle">
+        <option value="" data-i18n="noFile">No file</option>
+      </select>
+      <p class="chapter-now" id="chapterNow"></p>
+      <input id="chapterQuery" type="search" data-i18n-placeholder="chapterJump" placeholder="Jump to chapter" />
+      <div id="chapterList" class="chapter-list"></div>
+      <div class="row">
+        <button class="ghost" id="prev" type="button">
+          <span data-i18n="prev">Prev</span>
+          <span class="btn-key" id="prevKey">Ctrl+Z</span>
+        </button>
+        <button id="next" type="button">
+          <span data-i18n="next">Next</span>
+          <span class="btn-key" id="nextKey">Ctrl+X</span>
+        </button>
+        <button class="ghost" id="hide" type="button">
+          <span id="hideLabel" data-i18n="restore">Restore</span>
+          <span class="btn-key" id="hideKey">Ctrl+S</span>
+        </button>
+      </div>
+      <div class="popup-foot">
+        <button class="ghost tiny" id="pick" type="button" data-i18n="pick">Select</button>
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-locale="zh">中文</button>
+          <button type="button" data-locale="en">EN</button>
+        </div>
+        <button class="ghost tiny" id="openOptions" type="button" data-i18n="settings">Settings</button>
+      </div>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

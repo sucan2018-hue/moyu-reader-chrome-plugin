@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>Inline Reader · Settings</title>
+    <link rel="stylesheet" href="common.css" />
+    <style>
+      body {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <section class="block">
+        <div class="block-head">
+          <h1 data-i18n="helpTitle">How to use</h1>
+          <div class="lang-switch" role="group" aria-label="Language">
+            <button type="button" data-locale="zh">中文</button>
+            <button type="button" data-locale="en">English</button>
+          </div>
+        </div>
+        <ol class="steps">
+          <li data-i18n="help1"></li>
+          <li data-i18n="help2"></li>
+        </ol>
+        <table class="keys">
+          <thead>
+            <tr>
+              <th data-i18n="keyAction"></th>
+              <th data-i18n="keyWindows">Windows</th>
+              <th data-i18n="keyMac">Mac</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th data-i18n="keyPrev"></th>
+              <td>Alt+Z</td>
+              <td>Ctrl+Z</td>
+            </tr>
+            <tr>
+              <th data-i18n="keyNext"></th>
+              <td>Alt+X</td>
+              <td>Ctrl+X</td>
+            </tr>
+            <tr>
+              <th data-i18n="keyRestore"></th>
+              <td>Alt+S</td>
+              <td>Ctrl+S</td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="hint" data-i18n="shortcutHint"></p>
+      </section>
+
+      <section class="block">
+        <h1 data-i18n="importTitle">Import</h1>
+        <label>
+          <span data-i18n="chooseFile">Choose a text file</span>
+          <input id="file" type="file" accept=".txt,text/plain" />
+        </label>
+        <label>
+          <span data-i18n="encoding">Encoding</span>
+          <select id="encoding">
+            <option value="auto" data-i18n="encodingAuto">Auto detect</option>
+            <option value="utf-8">UTF-8</option>
+            <option value="gb18030">GBK / GB18030</option>
+          </select>
+        </label>
+        <div class="row">
+          <button id="importBtn" type="button" data-i18n="importBtn">Add to list</button>
+        </div>
+        <p class="status" id="status"></p>
+        <p class="hint" data-i18n="filePreview">File preview</p>
+        <div class="preview" id="preview"></div>
+      </section>
+
+      <section class="block">
+        <h1 data-i18n="libraryTitle">Library</h1>
+        <p class="lead" data-i18n="libraryLead"></p>
+        <div id="library" class="library"></div>
+      </section>
+
+      <section class="block">
+        <h1 data-i18n="charsTitle"></h1>
+        <p class="lead" data-i18n="charsLead"></p>
+        <label>
+          <span><span data-i18n="charsCurrent">Current:</span> <span id="pageCharsValue">40</span></span>
+          <input id="pageChars" type="range" min="20" max="80" step="5" value="40" disabled />
+        </label>
+      </section>
+
+      <section class="block">
+        <h1 data-i18n="progressTitle"></h1>
+        <p class="progress"><span id="progress">0 / 0</span></p>
+        <label class="compact">
+          <span data-i18n="jumpProgress">Jump to progress</span>
+          <input id="pageJump" type="range" min="0" max="0" value="0" disabled />
+        </label>
+        <p class="chapter-now" id="chapterNow" data-i18n="noToc"></p>
+        <input id="chapterQuery" type="search" data-i18n-placeholder="chapterSearch" />
+        <div id="chapterList" class="chapter-list"></div>
+        <p class="hint" data-i18n="linePreview"></p>
+        <div class="preview" id="current"></div>
+      </section>
+    </div>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>
