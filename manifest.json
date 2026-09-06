@@ -4,7 +4,8 @@
   "name": "__MSG_extName__",
   "version": "0.5.1",
   "description": "__MSG_extDesc__",
-  "permissions": ["bookmarks", "storage", "unlimitedStorage", "scripting", "activeTab"],
+  "homepage_url": "https://ko-fi.com/mark_2026",
+  "permissions": ["storage", "unlimitedStorage", "scripting", "activeTab"],
   "host_permissions": ["http://*/*", "https://*/*"],
   "background": {
     "service_worker": "background/service-worker.js",
@@ -38,24 +39,24 @@
   "commands": {
     "turn-prev": {
       "suggested_key": {
-        "default": "Alt+Z",
-        "windows": "Alt+Z",
+        "default": "Alt+Q",
+        "windows": "Alt+Q",
         "mac": "MacCtrl+Z"
       },
       "description": "__MSG_cmdPrev__"
     },
     "turn-next": {
       "suggested_key": {
-        "default": "Alt+X",
-        "windows": "Alt+X",
+        "default": "Alt+E",
+        "windows": "Alt+E",
         "mac": "MacCtrl+X"
       },
       "description": "__MSG_cmdNext__"
     },
     "hide-embed": {
       "suggested_key": {
-        "default": "Alt+S",
-        "windows": "Alt+S",
+        "default": "Alt+C",
+        "windows": "Alt+C",
         "mac": "MacCtrl+S"
       },
       "description": "__MSG_cmdHide__"

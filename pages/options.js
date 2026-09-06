@@ -1,5 +1,6 @@
 import { decodeText, detectEncoding } from "../lib/encoding.js";
 import { applyI18n, bindLangSwitch, initLocale, t } from "../lib/i18n.js";
+import { formatShortcut } from "../lib/shortcut.js";
 
 const fileInput = document.getElementById("file");
 const encodingSelect = document.getElementById("encoding");
@@ -235,11 +236,52 @@ importBtn.addEventListener("click", async () => {
   }
 });
 
+const shortcutCells = {
+  "turn-prev": { win: "keyPrevWin", mac: "keyPrevMac" },
+  "turn-next": { win: "keyNextWin", mac: "keyNextMac" },
+  "hide-embed": { win: "keyHideWin", mac: "keyHideMac" }
+};
+
+function shortcutLabel(shortcut, isMac) {
+  const text = formatShortcut(shortcut, { isMac });
+  return text === "未设置" ? t("shortcutUnset") : text;
+}
+
+async function fillShortcutTable() {
+  const isMac = navigator.platform.includes("Mac");
+  const commands = await chrome.commands.getAll();
+  for (const [name, cells] of Object.entries(shortcutCells)) {
+    const command = commands.find((item) => item.name === name);
+    const el = document.getElementById(isMac ? cells.mac : cells.win);
+    if (el) el.textContent = shortcutLabel(command?.shortcut, isMac);
+  }
+}
+
+function bindDonateQrs() {
+  document.querySelectorAll(".donate-qr img").forEach((img) => {
+    const hide = () => img.closest(".donate-qr")?.classList.add("is-missing");
+    img.addEventListener("error", hide);
+    if (img.complete && img.naturalWidth === 0) hide();
+  });
+}
+
+async function revealDonateIfNeeded() {
+  const stored = await chrome.storage.local.get({ openDonate: false });
+  if (!stored.openDonate && location.hash !== "#donate") return;
+  await chrome.storage.local.remove("openDonate");
+  document.getElementById("donate")?.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+
 await initLocale();
 applyI18n();
 preview.textContent = t("filePreviewEmpty");
 currentEl.textContent = t("linePreviewEmpty");
+bindDonateQrs();
+document.getElementById("editShortcuts").addEventListener("click", () => {
+  chrome.tabs.create({ url: "chrome://extensions/shortcuts" });
+});
 bindLangSwitch(() => {
+  fillShortcutTable();
   if (!pending) preview.textContent = t("filePreviewEmpty");
   if (latestState) applyState(latestState);
   else {
@@ -249,3 +291,5 @@ bindLangSwitch(() => {
 });
 loadSavedLayout();
 loadLibrary();
+fillShortcutTable();
+revealDonateIfNeeded();

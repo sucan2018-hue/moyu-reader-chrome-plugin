@@ -132,6 +132,10 @@ document.getElementById("pick").addEventListener("click", () => {
 document.getElementById("openOptions").addEventListener("click", () => {
   chrome.runtime.openOptionsPage();
 });
+document.getElementById("openDonate").addEventListener("click", async () => {
+  await chrome.storage.local.set({ openDonate: true });
+  chrome.runtime.openOptionsPage();
+});
 
 await initLocale();
 applyI18n();

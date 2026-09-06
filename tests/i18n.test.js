@@ -19,7 +19,7 @@ describe("i18n", () => {
 
   it("does not mention workplace slacking terms", () => {
     useLocale("zh");
-    const blob = ["help1", "help2", "pickerHint", "extName", "keyRestore"].map((key) => t(key)).join(" ");
+    const blob = ["help1", "help2", "pickerHint", "extName", "keyRestore", "donateLead"].map((key) => t(key)).join(" ");
     assert.equal(/公文|摸鱼|小说/.test(blob), false);
     useLocale("en");
     const en = ["help1", "help2", "pickerHint", "extName"].map((key) => t(key)).join(" ");

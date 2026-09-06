@@ -44,6 +44,12 @@ body.popup select {
   margin-top: 8px;
 }
 
+.popup-foot-links {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
 .block-head {
   display: flex;
   justify-content: space-between;
@@ -302,4 +308,52 @@ ol.steps {
   border-radius: 8px;
   background: var(--card);
   min-height: 3.2em;
+}
+
+.donate-qrs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 0 0 16px;
+}
+
+.donate-qrs:not(:has(.donate-qr:not(.is-missing))) {
+  display: none;
+}
+
+.donate-qr {
+  margin: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--card);
+  text-align: center;
+}
+
+.donate-qr img {
+  display: block;
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  margin: 0 auto 8px;
+  border-radius: 4px;
+}
+
+.donate-qr figcaption {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.donate-qr.is-missing {
+  display: none;
+}
+
+.donate-kofi {
+  display: inline-block;
+  border-radius: 8px;
+  padding: 10px 14px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-decoration: none;
+  font-weight: 650;
 }

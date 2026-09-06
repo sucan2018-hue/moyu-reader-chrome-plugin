@@ -36,22 +36,25 @@
           <tbody>
             <tr>
               <th data-i18n="keyPrev"></th>
-              <td>Alt+Z</td>
-              <td>Ctrl+Z</td>
+              <td id="keyPrevWin">Alt+Q</td>
+              <td id="keyPrevMac">Ctrl+Z</td>
             </tr>
             <tr>
               <th data-i18n="keyNext"></th>
-              <td>Alt+X</td>
-              <td>Ctrl+X</td>
+              <td id="keyNextWin">Alt+E</td>
+              <td id="keyNextMac">Ctrl+X</td>
             </tr>
             <tr>
               <th data-i18n="keyRestore"></th>
-              <td>Alt+S</td>
-              <td>Ctrl+S</td>
+              <td id="keyHideWin">Alt+C</td>
+              <td id="keyHideMac">Ctrl+S</td>
             </tr>
           </tbody>
         </table>
         <p class="hint" data-i18n="shortcutHint"></p>
+        <div class="row">
+          <button class="ghost" id="editShortcuts" type="button" data-i18n="editShortcuts">修改快捷键</button>
+        </div>
       </section>
 
       <section class="block">
@@ -103,6 +106,28 @@
         <div id="chapterList" class="chapter-list"></div>
         <p class="hint" data-i18n="linePreview"></p>
         <div class="preview" id="current"></div>
+      </section>
+
+      <section class="block" id="donate">
+        <h1 data-i18n="donateTitle">支持作者</h1>
+        <p class="lead" data-i18n="donateLead">功能全部免费。如果觉得有用，可以请我喝杯咖啡。</p>
+        <div class="donate-qrs">
+          <figure class="donate-qr">
+            <img src="../icons/donate-wechat.png" data-i18n-alt="donateWechat" alt="微信" />
+            <figcaption data-i18n="donateWechat">微信</figcaption>
+          </figure>
+          <figure class="donate-qr">
+            <img src="../icons/donate-alipay.png" data-i18n-alt="donateAlipay" alt="支付宝" />
+            <figcaption data-i18n="donateAlipay">支付宝</figcaption>
+          </figure>
+        </div>
+        <a
+          class="donate-kofi"
+          href="https://ko-fi.com/mark_2026"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-i18n="donateKofi"
+        >在 Ko-fi 请我喝杯咖啡</a>
       </section>
     </div>
     <script type="module" src="options.js"></script>
