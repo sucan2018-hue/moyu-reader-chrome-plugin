@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>摸鱼小说 · 设置</title>
+    <link rel="stylesheet" href="../pages/common.css" />
+    <style>
+      html, body {
+        margin: 0;
+        background: #111;
+      }
+      #frame {
+        width: 1280px;
+        height: 800px;
+        overflow: hidden;
+        background: var(--bg);
+      }
+      .shot-wrap {
+        width: 720px;
+        margin: 28px auto 0;
+      }
+      .block { margin-bottom: 22px; }
+      h1 { font-size: 24px; }
+    </style>
+  </head>
+  <body>
+    <div id="frame">
+    <div class="shot-wrap wrap">
+      <section class="block">
+        <div class="block-head">
+          <h1>摸鱼小说 · 设置</h1>
+          <div class="lang-switch">
+            <button type="button" class="is-active">中文</button>
+            <button type="button">English</button>
+          </div>
+        </div>
+        <ol class="steps">
+          <li>导入文本后，打开任意网页，点扩展图标里的「定位」，再点页面上一行即可嵌入。</li>
+          <li>弹窗可切换文档、搜索章节；每行字数和进度在本页下方。</li>
+        </ol>
+        <table class="keys">
+          <thead>
+            <tr>
+              <th>操作</th>
+              <th>Windows</th>
+              <th>Mac</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><th>上一页</th><td>Alt+Q</td><td>Ctrl+Z</td></tr>
+            <tr><th>下一页</th><td>Alt+T</td><td>Ctrl+X</td></tr>
+            <tr><th>还原原文</th><td>Alt+C</td><td>Ctrl+S</td></tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="block">
+        <h1>导入</h1>
+        <label>
+          <span>选择文本文件</span>
+          <input type="file" disabled />
+        </label>
+        <div class="row">
+          <button type="button">加入列表</button>
+        </div>
+        <p class="status">已保存 示例小说.txt，识别到 12 章。每行 40 字会记住。</p>
+      </section>
+      <section class="block">
+        <h1>文档列表</h1>
+        <div class="library">
+          <div class="book-row">
+            <div>
+              <strong>示例小说.txt</strong>
+              <div class="hint">正在读 · 第 12 页 · 12 章</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+  </body>
+</html>

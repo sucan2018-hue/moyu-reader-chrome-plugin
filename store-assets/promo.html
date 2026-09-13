@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>promo</title>
+    <style>
+      html, body {
+        margin: 0;
+        background: #111;
+      }
+      #frame {
+        width: 440px;
+        height: 280px;
+        overflow: hidden;
+        background: #2b241c;
+        color: #fffaf3;
+        font-family: "PingFang SC", "Microsoft YaHei", sans-serif;
+      }
+      .card {
+        width: 440px;
+        height: 280px;
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        padding: 36px 32px 36px 36px;
+      }
+      .icon {
+        width: 96px;
+        height: 96px;
+        border-radius: 18px;
+        background: #8b5a2b;
+        display: grid;
+        grid-template-columns: 22px 1fr;
+        overflow: hidden;
+        flex: 0 0 auto;
+      }
+      .spine { background: #6e4522; }
+      .pages {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 14px;
+      }
+      .pages i {
+        display: block;
+        height: 10px;
+        background: #f6f1e8;
+        border-radius: 2px;
+      }
+      .copy h1 {
+        margin: 0 0 10px;
+        font-size: 42px;
+        letter-spacing: 0.04em;
+      }
+      .copy p {
+        margin: 0;
+        font-size: 16px;
+        color: #e6dccb;
+        line-height: 1.45;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frame">
+    <div class="card">
+      <div class="icon" aria-hidden="true">
+        <div class="spine"></div>
+        <div class="pages"><i></i><i></i><i></i></div>
+      </div>
+      <div class="copy">
+        <h1>摸鱼小说</h1>
+        <p>嵌进网页一行里读<br />老板站在身后也看不出来</p>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>摸鱼小说 · 商店截图 1</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body {
+        margin: 0;
+        background: #111;
+      }
+      #frame {
+        width: 1280px;
+        height: 800px;
+        overflow: hidden;
+        background: #e8edf3;
+        color: #1f2a37;
+        font: 14px/1.6 "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+        position: relative;
+      }
+      .chrome {
+        height: 48px;
+        background: #dfe3d8;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 16px;
+        border-bottom: 1px solid #cfc6ad;
+      }
+      .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #c4b8a4;
+        display: inline-block;
+        margin-right: 5px;
+      }
+      .omnibox {
+        flex: 1;
+        height: 28px;
+        border-radius: 16px;
+        background: #f7f1ea;
+        border: 1px solid #e0d7c8;
+        padding: 0 14px;
+        color: #6b6258;
+        display: flex;
+        align-items: center;
+      }
+      .ext {
+        width: 28px;
+        height: 28px;
+        border-radius: 6px;
+        background: #8b5a2b;
+        display: grid;
+        place-items: center;
+        color: #fffaf3;
+        font-size: 12px;
+        font-weight: 800;
+      }
+      .shell {
+        display: grid;
+        grid-template-columns: 220px 1fr;
+        height: 752px;
+      }
+      .nav {
+        background: #243044;
+        color: #d7deea;
+        padding: 22px 16px;
+      }
+      .nav h2 {
+        margin: 0 0 18px;
+        font-size: 15px;
+        color: #fff;
+      }
+      .nav p {
+        margin: 0 0 10px;
+        padding: 8px 10px;
+        border-radius: 6px;
+      }
+      .nav .on { background: #3d4d66; color: #fff; }
+      .page {
+        padding: 36px 56px 40px;
+        background: #fff;
+      }
+      .crumb { color: #7a8794; font-size: 12px; margin: 0 0 8px; }
+      h1 { margin: 0 0 6px; font-size: 22px; }
+      .meta { color: #8a94a1; font-size: 12px; margin: 0 0 24px; }
+      .page p {
+        margin: 0 0 14px;
+        font-size: 15px;
+        color: #2c3540;
+      }
+      .callout {
+        margin: 8px 0 18px;
+        font-size: 12px;
+        color: #8b5a2b;
+        background: #fff6e8;
+        border: 1px solid #e6dccb;
+        border-radius: 6px;
+        padding: 6px 10px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frame">
+      <div class="chrome">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <div class="omnibox">docs.internal / 周报 / 2026-09-07</div>
+        <div class="ext">摸</div>
+      </div>
+      <div class="shell">
+        <aside class="nav">
+          <h2>团队文档</h2>
+          <p>首页</p>
+          <p class="on">本周工作同步</p>
+          <p>需求池</p>
+          <p>会议纪要</p>
+          <p>发布清单</p>
+        </aside>
+        <main class="page">
+          <p class="crumb">文档 / 周报 / 2026-09-07</p>
+          <h1>本周工作同步</h1>
+          <p class="meta">更新于今天 09:18 · 产品组</p>
+          <p>本周完成登录页改版评审，并同步了埋点字段。联调环境已更新到最新分支，请各组按清单回归。</p>
+          <p>待确认事项：灰度名单、客服文案、以及周四下午的走查时间。有冲突请直接在评论里回复。</p>
+          <p>窗外的雨还在下。他把文本打开，看扩展如何把当前一行嵌进网页。</p>
+          <div class="callout">上面这一行是小说，字体和颜色跟周围文档一样</div>
+          <p>附件里是本周接口变更表。无异议则按原计划周三合入主干。</p>
+          <p>下周一例会前请把风险项补进表格，方便统一过一遍。</p>
+          <p>本周值班：前端 A 组、后端 B 组。如需紧急发布，走原热修流程即可。</p>
+          <p>文档底部的检查项请在下班前勾完，避免周一再补。</p>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

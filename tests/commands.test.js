@@ -13,7 +13,7 @@ function windowsKey(name) {
 describe("windows command defaults", () => {
   it("uses the Windows keys requested for this build", () => {
     assert.equal(windowsKey("turn-prev"), "Alt+Q");
-    assert.equal(windowsKey("turn-next"), "Alt+E");
+    assert.equal(windowsKey("turn-next"), "Alt+T");
     assert.equal(windowsKey("hide-embed"), "Alt+C");
   });
 });

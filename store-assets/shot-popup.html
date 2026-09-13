@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>摸鱼小说 · 商店截图 2</title>
+    <link rel="stylesheet" href="../pages/common.css" />
+    <style>
+      html, body.shot {
+        margin: 0;
+        background: #111;
+      }
+      #frame {
+        width: 1280px;
+        height: 800px;
+        overflow: hidden;
+        background: #e8edf3;
+        position: relative;
+        font: 14px/1.5 "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+      .chrome {
+        height: 48px;
+        background: #dfe3d8;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0 16px;
+        border-bottom: 1px solid #cfc6ad;
+        font: 13px/1 "Segoe UI", "Microsoft YaHei", sans-serif;
+      }
+      .omnibox {
+        flex: 1;
+        height: 28px;
+        border-radius: 16px;
+        background: #f7f1ea;
+        border: 1px solid #e0d7c8;
+        padding: 0 14px;
+        color: #6b6258;
+        display: flex;
+        align-items: center;
+      }
+      .page {
+        padding: 48px 80px;
+        font: 15px/1.7 "Microsoft YaHei", sans-serif;
+        color: #2c3540;
+      }
+      .popup-card {
+        position: absolute;
+        top: 56px;
+        right: 28px;
+        width: 280px;
+        border-radius: 12px;
+        box-shadow: 0 16px 40px rgba(43, 36, 28, 0.22);
+        overflow: hidden;
+        background: var(--bg);
+      }
+      body.shot .popup-card .wrap { padding: 12px; }
+      .chapter-list { max-height: 88px; }
+      .row button { padding: 10px 6px; }
+    </style>
+  </head>
+  <body class="shot popup">
+    <div id="frame">
+    <div class="chrome">
+      <div class="omnibox">example.com / 产品说明</div>
+    </div>
+    <div class="page">
+      <h1 style="margin:0 0 12px;font-size:28px;">产品使用说明</h1>
+      <p>打开任意网页，把本地小说嵌进其中一行继续读。周围排版不变，只换这一行的字。</p>
+      <p>可用快捷键翻页：Windows 为 Alt+Q / Alt+T，还原为 Alt+C。</p>
+    </div>
+    <div class="popup-card">
+      <div class="wrap">
+        <select>
+          <option selected>示例小说.txt</option>
+        </select>
+        <p class="chapter-now">第一章 开篇</p>
+        <input type="search" value="" placeholder="跳转章节" />
+        <div class="chapter-list">
+          <button type="button" class="chapter-item is-current">第一章 开篇</button>
+          <button type="button" class="chapter-item">第二章 山雨</button>
+          <button type="button" class="chapter-item">第三章 远行</button>
+        </div>
+        <div class="row">
+          <button class="ghost" type="button">
+            <span>上</span>
+            <span class="btn-key">Alt+Q</span>
+          </button>
+          <button type="button">
+            <span>下</span>
+            <span class="btn-key">Alt+T</span>
+          </button>
+          <button class="ghost" type="button">
+            <span>还原</span>
+            <span class="btn-key">Alt+C</span>
+          </button>
+        </div>
+        <div class="popup-foot">
+          <button class="ghost tiny" type="button">定位</button>
+          <div class="lang-switch">
+            <button type="button" class="is-active">中文</button>
+            <button type="button">EN</button>
+          </div>
+          <div class="popup-foot-links">
+            <button class="ghost tiny" type="button">支持</button>
+            <button class="ghost tiny" type="button">设置</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

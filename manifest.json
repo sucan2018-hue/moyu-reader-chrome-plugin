@@ -2,6 +2,7 @@
   "manifest_version": 3,
   "default_locale": "zh_CN",
   "name": "__MSG_extName__",
+  "short_name": "摸鱼小说",
   "version": "0.5.1",
   "description": "__MSG_extDesc__",
   "homepage_url": "https://ko-fi.com/mark_2026",
@@ -47,8 +48,8 @@
     },
     "turn-next": {
       "suggested_key": {
-        "default": "Alt+E",
-        "windows": "Alt+E",
+        "default": "Alt+T",
+        "windows": "Alt+T",
         "mac": "MacCtrl+X"
       },
       "description": "__MSG_cmdNext__"
